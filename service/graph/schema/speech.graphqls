@@ -1,0 +1,74 @@
+type Speech {
+  id: ID!
+  title: String!
+  user: User!
+  meeting: Meeting
+  speechType: String!
+  timestamp: Int
+  location: String
+  project: String
+  speechLink: String
+  parentSpeech: Speech
+  actualTime: String!
+  expectedTime: String!
+  ahCounts: AhCounts
+  childSpeeches: [Speech]!
+  evaluationFilePath: String
+}
+
+type AhCounts {
+  id: ID!
+  speechId: ID!
+  ah: Int!
+  um: Int!
+  er: Int!
+  well: Int!
+  so: Int!
+  like: Int!
+  but: Int!
+  repeats: Int!
+  other: String!
+}
+
+input SaveSpeech {
+  id: ID
+  meetingId: ID
+  speechType: String!
+  timestamp: Int
+  location: String
+  project: String
+  userId: ID!
+  speechLink: String
+}
+
+input SpeechSearchCriteria {
+  limit: Int
+  offset: Int
+  id: ID
+  userId: ID
+  speechTypes: [String]
+  title: String
+}
+
+input RecordingSpeechInput {
+  from: String!
+  to: String!
+  speechId: ID
+  galleryCrop: Boolean!
+}
+
+input RecordingProcessInput {
+  zoomMeetingId: String!
+  speeches: [RecordingSpeechInput]!
+}
+
+type EvaluationDetails {
+  clarityRating: Int!
+  vocalVarietyRating: Int!
+  eyeContactRating: Int!
+  gesturesRating: Int!
+  audienceAwareness: Int!
+  comfortLevel: Int!
+  interest: Int!
+  othersJson: String
+}

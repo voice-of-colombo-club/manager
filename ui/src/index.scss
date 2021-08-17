@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#components-layout-demo-top-side-2 .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl #components-layout-demo-top-side-2 .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.inner-layout {
+  max-width: 1080px + 40px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+
+  &--xl {
+    @extend .inner-layout;
+    max-width: 1200px + 40px;
+  }
+}
+
+
+.content-widget {
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+  margin: 0 auto;
+  padding: 20px;
+  @media(min-width: 480px) {
+    width: fit-content;
+  }
+}
+
+
+// .ant-input {
+//   @media(min-width: 480px) {
+//     min-width: 400px;
+//   }
+// }
+
+.ant-input-number {
+  width: 100%;
+}
+
+.ant-picker {
+  width: 100%;
+}
+
+.ant-col-24.ant-form-item-label, .ant-col-xl-24.ant-form-item-label, .ant-form-vertical .ant-form-item-label {
+  padding: 0 0 3px;
+}
+
+.header {
+  line-height: 45px;
+  height: 45px;
+}
+
+.centered-content {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-form-item {
+  .ant-form-item-control-input {
+    display: none;
+  }
+}
+
+.revert-header-margin {
+  margin-top: -20px;
+}

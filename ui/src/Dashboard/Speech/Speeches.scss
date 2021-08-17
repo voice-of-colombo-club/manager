@@ -1,0 +1,90 @@
+.speeches-viewer {
+  .speech-row {
+    cursor: pointer;
+    padding: 12px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #d9d9d9;  
+    border-top: none;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+
+    &.selected {
+      border-right: 5px solid #1890ff;
+      background: #f5f5f5;
+    }
+
+    .date {
+      color: #9a9a9a;
+      margin-bottom: -5px;
+      font-size: 10px;
+      position: absolute;
+      right: 10px;
+    }
+
+    .title {
+      font-size: 19px;
+      line-height: 18px;
+      margin-bottom: 2px;
+    }
+
+    .user {
+      font-size: 12px;
+    }
+
+    .ant-tag {
+      font-size: 10px;
+      line-height: 18px;
+    }
+  }
+
+  .speeches-section {
+    height: calc(100vh - 140px);
+    border-top: 1px solid #d9d9d9;
+  }
+
+  .speeches-section-child-wrapper, .speech-list {
+    overflow-y: auto;
+    height: inherit; 
+  }
+
+
+  .ant-layout inner-layout {
+    width: 100%;
+  }
+
+  .speech-list {
+    background: white;
+    border: 1px solid #d9d9d9;
+    // border-bottom:none;
+    border-top:none;
+
+    &.loading-or-error-message {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+    
+    .loading-or-error-with-data {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .search-row {
+    padding: 10px 0px;
+    top: 50px;
+    row-gap: 0px;
+    z-index: 100;
+    background: #f0f2f5;
+  }
+
+  .video-wrapper {
+    margin: 20px 0px;
+  }
+
+
+  
+}
+

@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  isAdmin: Boolean!
+  clubs: [Club]!
+}
+
+input UserSearchCriteria {
+  limit: Int
+  offset: Int
+  id: ID
+}
+
+type Club {
+  id: ID!
+  clubName: String!
+}
